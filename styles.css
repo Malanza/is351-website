@@ -1,0 +1,206 @@
+/* ===== Base styles ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #dcc91c;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #eee;
+  background: #dcc91c;
+  padding: 15px 0;
+}
+
+.header-inner {
+  /* TODO A (Flexbox) */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand .dot {
+  /* TODO B (Color) */
+  background: #3a88a8; 
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  margin-left: 6px;
+}
+
+.site-nav a {
+  margin-left: 28px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #444;
+}
+
+/* ===== Hero ===== */
+.hero {
+  /* TODO C (Background image hero) */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero-content {
+  /* TODO D (Center content) */
+  text-align: center;
+  padding: 40px;
+}
+
+.hero h1 {
+  /* TODO E (Typography) */
+  font-size: 48px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero-subhead {
+  /* TODO F (Typography) */
+  font-size: 22px;
+  color: #ddd;
+  margin: 10px 0 25px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-dark {
+  /* TODO G (Button styling) */
+  background: #222;
+  color: #fff;
+}
+
+.btn-outline {
+  /* TODO H (Button styling) */
+  border: 2px solid #3a88a8;
+  color: #3a88a8;
+  background: transparent;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* ===== Features ===== */
+.features { padding: 60px 0; }
+
+.features-grid {
+  /* TODO I (Layout) */
+  display: flex;
+  gap: 26px;
+}
+
+.feature {
+  /* TODO J (Sizing/Alignment) + Custom Imagery */
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* Custom Backgrounds with Overlays */
+.pt-bg { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Fitness Coach photo.jpg'); }
+.group-bg { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Group Classes photo.jpg'); }
+.nutro-bg { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Nutrition photo.jpg'); }
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 15px;
+}
+
+/* ===== Secondary Content ===== */
+.secondary { padding: 50px 0; background: #0d0b0b; }
+
+.secondary-grid {
+  /* TODO K (Layout) */
+  display: flex;
+  gap: 26px;
+}
+
+.card {
+  /* TODO L (Card styling) */
+  flex: 1;
+  border: 1px solid #eee;
+  background: #fff;
+  overflow: hidden;
+}
+
+.card-image {
+  min-height: 200px;
+  /* TODO M (Image block) */
+  background-size: cover;
+  background-position: center;
+}
+
+.img-a { background-image: url('images/State of the art equip photo.jpg'); }
+.img-b { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=60'); }
+
+.card-text { padding: 20px; }
+
+/* ===== CTA ===== */
+.cta { padding: 60px 0; background: #fff; border-top: 1px solid #eee; }
+
+.cta-inner {
+  /* TODO N (Center CTA) */
+  text-align: center;
+}
+
+/* ===== Footer ===== */
+.site-footer { padding: 40px 0; background: #fafafa; border-top: 1px solid #eee; }
+
+.footer-inner {
+  /* TODO O (Footer layout) */
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left { max-width: 300px; color: #666; font-size: 13px; }
+.footer-cols { display: flex; gap: 40px; }
+.footer-col h4 { font-size: 14px; text-transform: uppercase; margin-bottom: 10px; }
+.footer-col a { display: block; color: #666; font-size: 13px; margin-bottom: 5px; }
